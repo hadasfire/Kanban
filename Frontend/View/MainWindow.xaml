@@ -1,0 +1,26 @@
+﻿<Window x:Class="Frontend.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frontend.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="kanbanPicture.jpg" />
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="723*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Margin="267,181,0,0" TextWrapping="Wrap" Text="{Binding Path=Email, Mode=OneWayToSource}" VerticalAlignment="Top" Width="130" Grid.Column="2"/>
+        <Label FontFamily="Comic Sans MS" FontSize="20" Content="EMAIL" HorizontalAlignment="Left" Margin="164,172,0,0"  VerticalAlignment="Top" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="267,244,0,0" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=OneWayToSource}" VerticalAlignment="Top" Width="130" Grid.Column="2"/>
+        <Label FontFamily="Comic Sans MS" FontSize="20" Content="PASSWORD" HorizontalAlignment="Left" Margin="131,232,0,0"  VerticalAlignment="Top" Grid.Column="2" Height="41" Width="143"/>
+        <Button FontFamily="Comic Sans MS" FontSize="16" Content="Login" HorizontalAlignment="Left" Click="Login_Click" Margin="350,294,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+        <Button FontFamily="Comic Sans MS" FontSize="16" Content="Register" HorizontalAlignment="Left" Click="Register_Click" Margin="264,294,0,0"  VerticalAlignment="Top" Grid.Column="2"/>
+        <Label FontFamily="Comic Sans MS" FontSize="14" Content="{Binding Path=ErrorMessage, Mode=OneWay}" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="284" Margin="239,339,0,0" Grid.Column="2" Height="45" Foreground="Red"/>
+    </Grid>
+</Window>
